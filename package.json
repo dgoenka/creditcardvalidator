@@ -1,0 +1,57 @@
+{
+  "name": "react-node-boilerplate",
+  "version": "0.0.0",
+  "description": "Starting point for a single-page React app running on a Node.js server",
+  "repository": "https://github.com/saltire/react-node-boilerplate",
+  "license": "ISC",
+  "engines": {
+    "node": "16"
+  },
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "watch": "nodemon -r dotenv/config server/index.js",
+    "build": "webpack --config webpack.prod.js",
+    "stylelint": "stylelint .",
+    "eslint": "eslint .",
+    "lint": "npm run eslint && npm run stylelint"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.4",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
+    "express": "^4.17.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "morgan": "^1.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-refresh": "^0.11.0",
+    "sass": "^1.49.7",
+    "sass-loader": "^12.4.0",
+    "terser-webpack-plugin": "^5.3.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-middleware": "^5.3.1",
+    "webpack-hot-middleware": "^2.25.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "nodemon": "^2.0.15",
+    "stylelint": "^14.3.0",
+    "stylelint-config-property-sort-order-smacss": "^8.0.0",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-scss": "^4.1.0"
+  }
+}

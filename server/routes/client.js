@@ -6,11 +6,14 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 
 const webpackConfig = require('../../webpack.dev');
-
+const {validate} = require("@babel/core/lib/config/validation/options");
+const validator = require("./validator");
 
 const { publicPath, path: outputPath } = webpackConfig.output;
 
 const router = module.exports = express.Router();
+
+
 
 if (process.env.NODE_ENV === 'production') {
   // Serve already-compiled webpack content from the dist folder.
